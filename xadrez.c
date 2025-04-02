@@ -1,32 +1,31 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+#define BISPO_MOVIMENTO 5
+#define TORRE_MOVIMENTO 5
+#define RAINHA_PASSOS 8
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    // Movimentação do Bispo usando "for"
+    printf("Movimento do Bispo (Diagonal superior direita):\n");
+    for (int i = 1; i <= BISPO_MOVIMENTO; i++) {
+        printf("Casa %d na diagonal para direita\n", i);
+    }
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // Movimentação da Torre usando "while"
+    printf("\nMovimento da Torre (Horizontal direita):\n");
+    int torre = 1;
+    while (torre <= TORRE_MOVIMENTO) {
+        printf("Casa %d na linha reta\n", torre);
+        torre++;
+    }
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    // Movimentação da Rainha usando "do-while"
+    printf("\nMovimento da Rainha:\n");
+    int passos = 0;
+    do {
+        printf("Passo %d para a esquerda\n", passos + 1);
+        passos++;
+    } while (passos < RAINHA_PASSOS);
 
     return 0;
 }
